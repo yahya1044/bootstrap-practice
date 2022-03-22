@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/801eb3ae4b.js" crossorigin="anonymous"></script>
+    <link href="http://fonts.cdnfonts.com/css/metropolis" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="cstyle.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <!---header-->
+    <nav class="navbar navbar-expand navbar-light header pd-navbar">
+        <div class="container align-items-start container-header alignment-top">
+            <div>
+                <div class="float-start" style="height: 35px;width: 35px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24">
+                        <path fill="#7657E6" fill-rule="evenodd"
+                            d="M4.75 15c0 .462.25.866.626 1.083a.75.75 0 01-.752 1.299A2.75 2.75 0 016 12.25 2.75 2.75 0 018.75 15v5a.75.75 0 01-1.5 0v-5a1.25 1.25 0 10-2.5 0zM19.25 10c0 .462-.25.866-.625 1.083a.75.75 0 10.75 1.299A2.749 2.749 0 0018 7.25 2.75 2.75 0 0015.25 10v10a.75.75 0 001.5 0V10a1.25 1.25 0 112.5 0z"
+                            clip-rule="evenodd"></path>
+                        <path fill="#7657E6" fill-rule="evenodd"
+                            d="M6.75 7c0 .978.625 1.813 1.5 2.122a.75.75 0 11-.5 1.414 3.751 3.751 0 115-3.536v13a.75.75 0 01-1.5 0V7a2.25 2.25 0 00-4.5 0z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <div class="float-start">
+                    <h6 class="header-text">XX</h6>
+                </div>
+            </div>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse alignment-left" id="navmenu">
+                <ul class="navbar-nav ms-auto justify-content-between">
+                    <a href="#" class="header-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="19"
+                            fill="none" viewBox="0 0 26 31">
+                            <path fill="currentColor"
+                                d="M10.274 13.583c.85 0 1.539.638 1.523 1.417 0 .78-.671 1.417-1.523 1.417-.835 0-1.524-.638-1.524-1.417 0-.78.673-1.417 1.524-1.417zm5.452 0c.851 0 1.524.638 1.524 1.417 0 .78-.673 1.417-1.524 1.417-.836 0-1.523-.638-1.523-1.417 0-.78.671-1.417 1.523-1.417zM22.762.833c1.648 0 2.988 1.369 2.988 3.065v26.685l-3.132-2.826-1.764-1.666-1.866-1.77.774 2.752H3.238C1.59 27.073.25 25.704.25 24.009V3.898C.25 2.202 1.59.833 3.238.833h19.524zM17.138 20.26c3.22-.103 4.46-2.26 4.46-2.26 0-4.79-2.1-8.674-2.1-8.674-2.096-1.605-4.094-1.56-4.094-1.56l-.204.237c2.478.774 3.628 1.89 3.628 1.89a11.706 11.706 0 00-4.386-1.428 12.08 12.08 0 00-2.942.028c-.088 0-.162.016-.248.03-.51.045-1.75.238-3.308.938-.538.252-.86.432-.86.432s1.21-1.176 3.832-1.95l-.146-.178s-1.996-.044-4.094 1.563c0 0-2.098 3.881-2.098 8.671 0 0 1.224 2.156 4.444 2.261 0 0 .538-.669.977-1.234-1.851-.567-2.55-1.756-2.55-1.756s.145.104.407.253c.014.014.028.03.058.044.044.031.088.045.132.075.364.208.728.371 1.062.506.598.238 1.312.476 2.144.64 1.245.244 2.526.25 3.774.014a9.443 9.443 0 002.112-.639 8.367 8.367 0 001.676-.878s-.728 1.22-2.638 1.77c.438.566.964 1.205.964 1.205h-.002z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="#" class="header-icon"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="15"
+                            fill="none" viewBox="0 0 30 24">
+                            <path fill="currentColor"
+                                d="M29.396 3.013a11.878 11.878 0 01-3.403.932A5.944 5.944 0 0028.6.667a11.84 11.84 0 01-3.763 1.438 5.924 5.924 0 00-10.095 5.403A16.821 16.821 0 012.531 1.317a5.905 5.905 0 00-.802 2.98 5.924 5.924 0 002.635 4.93 5.905 5.905 0 01-2.683-.74v.073a5.929 5.929 0 004.752 5.81 5.965 5.965 0 01-2.677.102 5.928 5.928 0 005.535 4.115 11.893 11.893 0 01-8.77 2.454 16.76 16.76 0 009.08 2.663c10.899 0 16.858-9.028 16.858-16.858 0-.255-.007-.513-.018-.765a12.035 12.035 0 002.957-3.067l-.002-.001z">
+                            </path>
+                        </svg>
+                    </a>
+                    <div>
+                        <a href="#">
+                            <button type="button" class="apply-btn btn-hero transparent-button-2">
+                                Connect Wallet
+                            </button>
+                        </a>
+                    </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle p-0" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <button type="button" class="apply-btn btn-hero transparent-button-2">
+                                <img src="http://xxwatch.surge.sh/static/media/hamburger.png" alt="">
+                            </button>
+                        </a>
+                        <ul class="dropdown-menu transparent-button-1" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item transparent-button" href="#">About UTC</a></li>
+                            <li><a class="dropdown-item transparent-button" href="#">Contract Address</a></li>
+                            <li><a class="dropdown-item transparent-button" href="#">Github</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+    </nav>
+    <div>
+        <div class="section-video-main">
+            <div class="section-video">
+                <video autoplay muted loop id="myVideo">
+                    <source src="images/1029686762-preview.mp4" type="video/mp4">
+                </video>
+                <div class="center-area align-items-end">
+                    <h2 style="color: white; text-align: center;" class="header-text-center">It's Time.</h2>
+                    <button type="button" class="apply-btn btn-hero transparent-button-2">
+                        come inside
+                        <img src="images/arrow-211-xxl.png" style="height: 15px;width: 15px; margin-left: 5px;">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="section-one">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="section-one-left">
+                        <h2 class="text-white title"> <span style="color: #9f01eb;"> 7,750</span> Unique
+                            <br> NFTs
+                        </h2>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="text-white text-center section-one-right">
+                        <p>0.0775 ETH Each - Instantly Revealed - Minting Open Now!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------->
+    <div class="swiper mySwiper pd-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slides-images">
+                    <img src="images/F_var_1436_Watches_Build_C1.png">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slides-images">
+                    <img src="images/F_var_1436_Watches_Build_C1.png">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slides-images">
+                    <img src="images/E_var_0383_Watches_Build_C3.png">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slides-images">
+                    <img src="images/F_var_1382_Watches_Build_C1.png">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slides-images">
+                    <img src="images/E_var_0384_Watches_Build_C3.png">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slides-images">
+                    <img src="images/E_var_0383_Watches_Build_C3.png">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slides-images">
+                    <img src="images/E_var_0286_Watches_Build_C3.png">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slides-images">
+                    <img src="images/F_var_1436_Watches_Build_C1.png">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slides-images">
+                    <img src="images/F_var_1382_Watches_Build_C1.png">
+                </div>
+            </div>
+        </div>
+        <div class="pn-buttons">
+            <div class="swiper-button-prev pd-lr-arrows"></div>
+            <div class="swiper-button-next pd-lr-arrows"></div>
+        </div>
+        <div class="swiper-pagination mb-4"></div>
+    </div>
+    <!----------->
+    <div class="section-3-background">
+        <div class="container mg-section-3">
+            <div class="text-center text-white mg-text">
+                <h2 class="title-1">Timeline to Treasures</h2>
+                <p class="paragraph">Tempus is by collectors for collectors. In true trillionaire fashion, we have up to
+                    $100,000 USD worth of prizes to be airdropped, given away, and spent on activities for our holders.
+                </p>
+            </div>
+            <div class="roadmaps-cards">
+                <div class="pd-cards">
+                    <div class="cards-title">
+                        <span class="cards-percent">0%</span>
+                        <span class="cards-border"></span>
+                        <span class="text-white">Sold</span>
+                    </div>
+                    <p class="font-para">Minting opens, and collectors in the know get exclusive access and membership.
+                        Listing on Opensea, and reveal upon mint. Trading enabled.</p>
+                </div>
+                <div class="pd-cards">
+                    <div class="cards-title">
+                        <span class="cards-percent">25%</span>
+                        <span class="cards-border"></span>
+                        <span class="text-white">Sold</span>
+                    </div>
+                    <p class="font-para">Minting opens, and collectors in the know get exclusive access and membership.
+                        Listing on Opensea, and reveal upon mint. Trading enabled.</p>
+                </div>
+                <div class="pd-cards">
+                    <div class="cards-title">
+                        <span class="cards-percent">50%</span>
+                        <span class="cards-border"></span>
+                        <span class="text-white">Sold</span>
+                    </div>
+                    <p class="font-para">Minting opens, and collectors in the know get exclusive access and membership.
+                        Listing on Opensea, and reveal upon mint. Trading enabled.</p>
+                </div>
+                <div class="pd-cards">
+                    <div class="cards-title">
+                        <span class="cards-percent">75%</span>
+                        <span class="cards-border"></span>
+                        <span class="text-white">Sold</span>
+                    </div>
+                    <p class="font-para">Minting opens, and collectors in the know get exclusive access and membership.
+                        Listing on Opensea, and reveal upon mint. Trading enabled.</p>
+                </div>
+                <div class="pd-cards">
+                    <div class="cards-title">
+                        <span class="cards-percent">100%</span>
+                        <span class="cards-border"></span>
+                        <span class="text-white">Sold</span>
+                    </div>
+                    <p class="font-para">Minting opens, and collectors in the know get exclusive access and membership.
+                        Listing on Opensea, and reveal upon mint. Trading enabled.</p>
+                </div>
+            </div>
+            <div class="row md-rows justify-content-between">
+                <div class="col-lg-3 px-0 float-start">
+                    <h2 class="title"><span style="color: #9f01eb;">The</span><br> Watchmen</h2>
+                </div>
+                <div class="col-lg-8 float-end">
+                    <p class="paragraph-1 text-white">The core team are veterans in their respective fields, with plenty
+                        of experience in blockchain product design, smart contract development, brand marketing, and
+                        data science. With time, you will come to see that they will be the ones to watch.</p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center pd-cards-watch">
+                <div class="card-image col-xl col-lg col-md col-sm-6  mb-4 p-0 mx-3">
+                    <div class="card" style="background: #0b0f20;">
+                        <img src="images/F_var_1382_Watches_Build_C1.png" class="img-fluid">
+                        <div class="card-body watch-cards p-0">
+                            <h5 class="text-white p-4">kzX the Undoxxed</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-image col-xl col-lg col-md col-sm-6 mb-4 p-0 mx-3">
+                    <div class="card" style="background: #0b0f20;">
+                        <img src="images/C_var_0072_Watches_Build_B3.png" class="img-fluid">
+                        <div class="card-body watch-cards p-0">
+                            <h5 class="text-white p-4">androit the Undoxxed</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-image col-xl col-lg col-md col-sm-6 mb-4 p-0 mx-3">
+                    <div class="card" style="background: #0b0f20;">
+                        <img src="images/E_var_0384_Watches_Build_C3.png" class="img-fluid">
+                        <div class="card-body watch-cards p-0">
+                            <h5 class="text-white p-4">dbeck the Undoxxed</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-image col-xl col-lg col-md-4 col-sm-6 mb-4 p-0 mx-3">
+                    <div class="card" style="background: #0b0f20;">
+                        <img src="images/F_var_1436_Watches_Build_C1.png" class="img-fluid">
+                        <div class="card-body watch-cards p-0">
+                            <h5 class="text-white p-4">castor the Undoxxed</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-image col-xl col-lg col-md-4 col-sm-6 mb-4 watch-cards p-0 mx-3">
+                    <div class="card" style="background: #0b0f20;">
+                        <img src="images/F_var_1382_Watches_Build_C1.png" class="img-fluid">
+                        <div class="card-body watch-cards p-0">
+                            <h5 class="text-white p-4">pollux the Undoxxed</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="js-card">
+            <div class="container">
+                <div class="js-card-content">
+                    <div class="left text-left">
+                        <h2 class="text-white">Join the Society</h2>
+                        <p>Connect with a network of the metaverse's top discerning collectors, and stay on top of
+                            inside information that will only be shared with the Undoxxed.</p>
+                        <a href="#">
+                            <button type="button" class="apply-btn jd-button transparent-button">
+                                Join our discard
+                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" fill="none"
+                                    viewBox="0 0 8 14" class="ms-3">
+                                    <path fill="#fff"
+                                        d="M5.172 7L.222 2.05 1.636.636 8 7l-6.364 6.364L.222 11.95 5.172 7z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </a>
+                    </div>
+                    <img src="images/pot_5_trunk_5_mat_1_leaves_4_flowers_5_color_4_prop_5 1.ab9254e8.png" alt="">
+                    <!----
+                    <div class="right">
+                       <img src="images/pot_5_trunk_5_mat_1_leaves_4_flowers_5_color_4_prop_5 1.ab9254e8.png">
+                    </div>
+                    <div class="images">     </div>-->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container pd-footer">
+            <div class="footer-top-left">
+                <div class="footer-left">
+                    <div class="footer-logos">
+                        <div class="float-start" style="height: 35px;width: 35px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" fill="none"
+                                viewBox="0 0 24 24">
+                                <path fill="#7657E6" fill-rule="evenodd"
+                                    d="M4.75 15c0 .462.25.866.626 1.083a.75.75 0 01-.752 1.299A2.75 2.75 0 016 12.25 2.75 2.75 0 018.75 15v5a.75.75 0 01-1.5 0v-5a1.25 1.25 0 10-2.5 0zM19.25 10c0 .462-.25.866-.625 1.083a.75.75 0 10.75 1.299A2.749 2.749 0 0018 7.25 2.75 2.75 0 0015.25 10v10a.75.75 0 001.5 0V10a1.25 1.25 0 112.5 0z"
+                                    clip-rule="evenodd"></path>
+                                <path fill="#7657E6" fill-rule="evenodd"
+                                    d="M6.75 7c0 .978.625 1.813 1.5 2.122a.75.75 0 11-.5 1.414 3.751 3.751 0 115-3.536v13a.75.75 0 01-1.5 0V7a2.25 2.25 0 00-4.5 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div class="float-start">
+                            <h6 class="footer-text" style="height: 29px; width: 36.88px;">XX</h6>
+                        </div>
+                    </div>
+                    <p>Welcome to the Inside.</p>
+                </div>
+                <div class="footer-right">
+                    <div>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="31" fill="none"
+                                viewBox="0 0 26 31" style="color: #9f01eb;">
+                                <path fill="currentColor"
+                                    d="M10.274 13.583c.85 0 1.539.638 1.523 1.417 0 .78-.671 1.417-1.523 1.417-.835 0-1.524-.638-1.524-1.417 0-.78.673-1.417 1.524-1.417zm5.452 0c.851 0 1.524.638 1.524 1.417 0 .78-.673 1.417-1.524 1.417-.836 0-1.523-.638-1.523-1.417 0-.78.671-1.417 1.523-1.417zM22.762.833c1.648 0 2.988 1.369 2.988 3.065v26.685l-3.132-2.826-1.764-1.666-1.866-1.77.774 2.752H3.238C1.59 27.073.25 25.704.25 24.009V3.898C.25 2.202 1.59.833 3.238.833h19.524zM17.138 20.26c3.22-.103 4.46-2.26 4.46-2.26 0-4.79-2.1-8.674-2.1-8.674-2.096-1.605-4.094-1.56-4.094-1.56l-.204.237c2.478.774 3.628 1.89 3.628 1.89a11.706 11.706 0 00-4.386-1.428 12.08 12.08 0 00-2.942.028c-.088 0-.162.016-.248.03-.51.045-1.75.238-3.308.938-.538.252-.86.432-.86.432s1.21-1.176 3.832-1.95l-.146-.178s-1.996-.044-4.094 1.563c0 0-2.098 3.881-2.098 8.671 0 0 1.224 2.156 4.444 2.261 0 0 .538-.669.977-1.234-1.851-.567-2.55-1.756-2.55-1.756s.145.104.407.253c.014.014.028.03.058.044.044.031.088.045.132.075.364.208.728.371 1.062.506.598.238 1.312.476 2.144.64 1.245.244 2.526.25 3.774.014a9.443 9.443 0 002.112-.639 8.367 8.367 0 001.676-.878s-.728 1.22-2.638 1.77c.438.566.964 1.205.964 1.205h-.002z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" class="mg-twitter"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="24"
+                                fill="none" viewBox="0 0 30 24" style="color: #9f01eb;">
+                                <path fill="currentColor"
+                                    d="M29.396 3.013a11.878 11.878 0 01-3.403.932A5.944 5.944 0 0028.6.667a11.84 11.84 0 01-3.763 1.438 5.924 5.924 0 00-10.095 5.403A16.821 16.821 0 012.531 1.317a5.905 5.905 0 00-.802 2.98 5.924 5.924 0 002.635 4.93 5.905 5.905 0 01-2.683-.74v.073a5.929 5.929 0 004.752 5.81 5.965 5.965 0 01-2.677.102 5.928 5.928 0 005.535 4.115 11.893 11.893 0 01-8.77 2.454 16.76 16.76 0 009.08 2.663c10.899 0 16.858-9.028 16.858-16.858 0-.255-.007-.513-.018-.765a12.035 12.035 0 002.957-3.067l-.002-.001z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom pd-footer-bottom text-center">
+                <p class="footer-bottom-text">© 2021 XX</p>
+            </div>
+        </div>
+
+    </footer>----->
+    <!------<div class="row justify-content-between align-items-center">
+                    <div class="col-md-2 col-lg-3">
+                        <div class="float-start">
+                            <div class="float-start" style="height: 35px;width: 35px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path fill="#7657E6" fill-rule="evenodd"
+                                        d="M4.75 15c0 .462.25.866.626 1.083a.75.75 0 01-.752 1.299A2.75 2.75 0 016 12.25 2.75 2.75 0 018.75 15v5a.75.75 0 01-1.5 0v-5a1.25 1.25 0 10-2.5 0zM19.25 10c0 .462-.25.866-.625 1.083a.75.75 0 10.75 1.299A2.749 2.749 0 0018 7.25 2.75 2.75 0 0015.25 10v10a.75.75 0 001.5 0V10a1.25 1.25 0 112.5 0z"
+                                        clip-rule="evenodd"></path>
+                                    <path fill="#7657E6" fill-rule="evenodd"
+                                        d="M6.75 7c0 .978.625 1.813 1.5 2.122a.75.75 0 11-.5 1.414 3.751 3.751 0 115-3.536v13a.75.75 0 01-1.5 0V7a2.25 2.25 0 00-4.5 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="float-start">
+                                <h6 class="header-text" style="height: 29px; width: 36.88px;">XX</h6>
+                            </div>
+                        </div>
+
+                        <p class="float-start text-white pt-2">Welcome to the Inside.</p>
+
+                    </div>
+                    <div class="col-md-2 col-lg-3">
+                        <div class="footer-right float-end">
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="31" fill="none"
+                                    viewBox="0 0 26 31" style="color: purple;">
+                                    <path fill="currentColor"
+                                        d="M10.274 13.583c.85 0 1.539.638 1.523 1.417 0 .78-.671 1.417-1.523 1.417-.835 0-1.524-.638-1.524-1.417 0-.78.673-1.417 1.524-1.417zm5.452 0c.851 0 1.524.638 1.524 1.417 0 .78-.673 1.417-1.524 1.417-.836 0-1.523-.638-1.523-1.417 0-.78.671-1.417 1.523-1.417zM22.762.833c1.648 0 2.988 1.369 2.988 3.065v26.685l-3.132-2.826-1.764-1.666-1.866-1.77.774 2.752H3.238C1.59 27.073.25 25.704.25 24.009V3.898C.25 2.202 1.59.833 3.238.833h19.524zM17.138 20.26c3.22-.103 4.46-2.26 4.46-2.26 0-4.79-2.1-8.674-2.1-8.674-2.096-1.605-4.094-1.56-4.094-1.56l-.204.237c2.478.774 3.628 1.89 3.628 1.89a11.706 11.706 0 00-4.386-1.428 12.08 12.08 0 00-2.942.028c-.088 0-.162.016-.248.03-.51.045-1.75.238-3.308.938-.538.252-.86.432-.86.432s1.21-1.176 3.832-1.95l-.146-.178s-1.996-.044-4.094 1.563c0 0-2.098 3.881-2.098 8.671 0 0 1.224 2.156 4.444 2.261 0 0 .538-.669.977-1.234-1.851-.567-2.55-1.756-2.55-1.756s.145.104.407.253c.014.014.028.03.058.044.044.031.088.045.132.075.364.208.728.371 1.062.506.598.238 1.312.476 2.144.64 1.245.244 2.526.25 3.774.014a9.443 9.443 0 002.112-.639 8.367 8.367 0 001.676-.878s-.728 1.22-2.638 1.77c.438.566.964 1.205.964 1.205h-.002z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mg-twitter"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                    height="24" fill="none" viewBox="0 0 30 24" style="color: purple;">
+                                    <path fill="currentColor"
+                                        d="M29.396 3.013a11.878 11.878 0 01-3.403.932A5.944 5.944 0 0028.6.667a11.84 11.84 0 01-3.763 1.438 5.924 5.924 0 00-10.095 5.403A16.821 16.821 0 012.531 1.317a5.905 5.905 0 00-.802 2.98 5.924 5.924 0 002.635 4.93 5.905 5.905 0 01-2.683-.74v.073a5.929 5.929 0 004.752 5.81 5.965 5.965 0 01-2.677.102 5.928 5.928 0 005.535 4.115 11.893 11.893 0 01-8.77 2.454 16.76 16.76 0 009.08 2.663c10.899 0 16.858-9.028 16.858-16.858 0-.255-.007-.513-.018-.765a12.035 12.035 0 002.957-3.067l-.002-.001z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>----->
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
